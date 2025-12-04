@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>장바구니 - SAMJUNG</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+  <!-- Lucide -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- 공통 헤더 -->
+  <script src="js/header.js"></script>
+  <script src="js/footer.js"></script>
+  <!-- cart.js -->
+  <script src="js/cart.js" defer></script>
+</head>
+<body>
+
+  <main class="page-main">
+    <section class="section">
+
+      <h2>장바구니</h2>
+
+      <div id="cartList" class="cart-list"></div>
+
+      <div class="cart-bottom">
+        <div class="cart-total">
+          총 금액: <span id="cartTotalPrice">0</span>원
+        </div>
+        <button id="btnPurchaseAll" class="btn-purchase-all">
+          모두 구매하기
+        </button>
+      </div>
+
+    </section>
+  </main>
+
+
+</body>
+</html>

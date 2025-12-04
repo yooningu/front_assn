@@ -1,0 +1,62 @@
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+  <!-- Lucide 아이콘 -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Three.js + GLTFLoader (버전 낮춰서 전통 방식 사용) -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.130.1/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.130.1/examples/js/loaders/GLTFLoader.js"></script>
+
+  <!-- 공통 헤더/푸터 -->
+  <script src="js/header.js"></script>
+  
+
+  <!-- 상품 상세 -->
+  <script src="js/product.js" defer></script>
+
+
+  <script src="js/footer.js"></script>
+</head>
+
+
+
+
+
+
+
+
+<body>
+  <main class="page-main">
+    <section class="section">
+      <div class="product-detail-container">
+
+        <!-- 왼쪽: 이미지 -->
+        <div class="product-visual">
+          <img id="productImage" class="product-detail-img" src="" alt="" />
+        </div>
+
+        <!-- 오른쪽: 정보 -->
+        <div class="product-info">
+          <h2 id="productName"></h2>
+          <p id="productDesc"></p>
+          <p class="product-detail-price" id="productPrice"></p>
+
+          <button class="add-cart-btn" id="addCartBtn">
+            <i data-lucide="shopping-cart"></i>
+            장바구니 담기
+          </button>
+        </div>
+<canvas id="modelCanvas" width="500" height="500"></canvas>
+      </div>
+    </section>
+  </main>
+
+
+</body>
+</html>

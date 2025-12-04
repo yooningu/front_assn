@@ -1,0 +1,241 @@
+[
+  {
+    "id": 1,
+    "name": "SJ Fold X",
+    "category": "mobile",
+    "price": 1990000,
+    "desc": "강력한 AI 성능과 더 얇아진 프레임을 가진 폴더블 스마트폰.",
+    "image": "https://images.samsung.com/kdp/goods/2025/07/03/8b272cf8-0834-4107-a75f-c5afa2b325c5.jpg",
+    "model": "glb/p1.glb"
+  },
+  {
+    "id": 2,
+    "name": "SJ Galaxy S25 Ultra",
+    "category": "mobile",
+    "price": 1590000,
+    "desc": "2억 화소 카메라와 초고속 AP를 탑재한 플래그십 스마트폰.",
+    "image": "img/mobile_s25ultra.png",
+    "model": "models/s25ultra.glb"
+  },
+  {
+    "id": 3,
+    "name": "SJ Galaxy A35",
+    "category": "mobile",
+    "price": 420000,
+    "desc": "합리적인 가격의 A 시리즈 스마트폰.",
+    "image": "img/mobile_a35.png",
+    "model": "models/a35.glb"
+  },
+  {
+    "id": 4,
+    "name": "SJ Buds Pro",
+    "category": "mobile",
+    "price": 249000,
+    "desc": "프리미엄 노이즈 캔슬링 무선 이어폰.",
+    "image": "img/mobile_budspro.png",
+    "model": "models/budspro.glb"
+  },
+  {
+    "id": 5,
+    "name": "SJ Smart Watch 6",
+    "category": "mobile",
+    "price": 398000,
+    "desc": "체성분 측정이 가능한 차세대 스마트워치.",
+    "image": "img/mobile_watch6.png",
+    "model": "models/watch6.glb"
+  },
+
+  {
+    "id": 6,
+    "name": "SJ Book Pro 16",
+    "category": "pc",
+    "price": 2190000,
+    "desc": "초경량 고성능 노트북. 전문가용 작업에 최적화.",
+    "image": "img/pc_bookpro16.png",
+    "model": "models/bookpro16.glb"
+  },
+  {
+    "id": 7,
+    "name": "SJ Odyssey Gaming 5",
+    "category": "pc",
+    "price": 1890000,
+    "desc": "최신 GPU 기반의 고성능 게이밍 데스크탑.",
+    "image": "img/pc_odyssey5.png",
+    "model": "models/odyssey5.glb"
+  },
+  {
+    "id": 8,
+    "name": "SJ All-in-One 27",
+    "category": "pc",
+    "price": 1340000,
+    "desc": "27인치 올인원 PC로 깔끔한 책상 구성을 지원.",
+    "image": "img/pc_aio27.png",
+    "model": "models/aio27.glb"
+  },
+  {
+    "id": 9,
+    "name": "SJ Portable Monitor 15",
+    "category": "pc",
+    "price": 320000,
+    "desc": "휴대용 USB-C 모니터.",
+    "image": "img/pc_portable15.png",
+    "model": "models/portable15.glb"
+  },
+  {
+    "id": 10,
+    "name": "SJ Mechanical Keyboard K8",
+    "category": "pc",
+    "price": 129000,
+    "desc": "기계식 RGB 키보드.",
+    "image": "img/pc_keyboardk8.png",
+    "model": "models/keyboardk8.glb"
+  },
+
+  {
+    "id": 11,
+    "name": "Bespoke AI 냉장고 4도어",
+    "category": "living",
+    "price": 3190000,
+    "desc": "AI 식재료 관리 기능을 갖춘 프리미엄 냉장고.",
+    "image": "img/living_fridge4door.png",
+    "model": "models/fridge4door.glb"
+  },
+  {
+    "id": 12,
+    "name": "Bespoke 의류관리기",
+    "category": "living",
+    "price": 1590000,
+    "desc": "의류 먼지제거 및 스팀 살균 기능.",
+    "image": "img/living_closet.png",
+    "model": "models/closet.glb"
+  },
+  {
+    "id": 13,
+    "name": "AI 공기청정기 Ultra",
+    "category": "living",
+    "price": 890000,
+    "desc": "초미세먼지 자동 감지 공기청정기.",
+    "image": "img/living_airpurifier.png",
+    "model": "models/airpurifier.glb"
+  },
+  {
+    "id": 14,
+    "name": "로봇 청소기 SJ Bot",
+    "category": "living",
+    "price": 780000,
+    "desc": "AI 맵핑 기능이 추가된 최신 로봇청소기.",
+    "image": "img/living_robot.png",
+    "model": "models/robot.glb"
+  },
+  {
+    "id": 15,
+    "name": "Bespoke 정수기 슬림",
+    "category": "living",
+    "price": 590000,
+    "desc": "슬림한 디자인의 정수기.",
+    "image": "img/living_waterpurifier.png",
+    "model": "models/waterpurifier.glb"
+  },
+
+  {
+    "id": 16,
+    "name": "AI 인덕션 플러스",
+    "category": "kitchen",
+    "price": 1290000,
+    "desc": "AI 온도 제어가 가능한 고급 인덕션.",
+    "image": "img/kitchen_induction.png",
+    "model": "models/induction.glb"
+  },
+  {
+    "id": 17,
+    "name": "식기세척기 Ultra Wash",
+    "category": "kitchen",
+    "price": 990000,
+    "desc": "초고압 세척이 가능한 프리미엄 식기세척기.",
+    "image": "img/kitchen_dishwasher.png",
+    "model": "models/dishwasher.glb"
+  },
+  {
+    "id": 18,
+    "name": "Bespoke 오븐 30L",
+    "category": "kitchen",
+    "price": 670000,
+    "desc": "30리터 대용량 오븐.",
+    "image": "img/kitchen_oven.png",
+    "model": "models/oven.glb"
+  },
+  {
+    "id": 19,
+    "name": "AI 커피머신 SJ Barista",
+    "category": "kitchen",
+    "price": 540000,
+    "desc": "원두별 AI 추출 기능 탑재.",
+    "image": "img/kitchen_coffeemachine.png",
+    "model": "models/coffeemachine.glb"
+  },
+  {
+    "id": 20,
+    "name": "스마트 전기포트 1.7L",
+    "category": "kitchen",
+    "price": 89000,
+    "desc": "온도 조절 가능한 스마트 전기포트.",
+    "image": "img/kitchen_kettle.png",
+    "model": "models/kettle.glb"
+  },
+
+  {
+    "id": 21,
+    "name": "SJ QLED 8K 75인치",
+    "category": "tv",
+    "price": 4200000,
+    "desc": "생생한 화질의 QLED 8K TV.",
+    "image": "img/tv_qled8k.png",
+    "model": "models/qled8k.glb"
+  },
+  {
+    "id": 22,
+    "name": "SJ OLED 65인치",
+    "category": "tv",
+    "price": 3290000,
+    "desc": "완벽한 블랙을 표현하는 OLED TV.",
+    "image": "img/tv_oled65.png",
+    "model": "models/oled65.glb"
+  },
+  {
+    "id": 23,
+    "name": "SJ Crystal UHD 55",
+    "category": "tv",
+    "price": 790000,
+    "desc": "선명한 색감을 제공하는 UHD TV.",
+    "image": "img/tv_crystal55.png",
+    "model": "models/crystal55.glb"
+  },
+  {
+    "id": 24,
+    "name": "SJ Soundbar AI Max",
+    "category": "tv",
+    "price": 690000,
+    "desc": "서라운드 AI 자동 음향 조절 사운드바.",
+    "image": "img/tv_soundbarmax.png",
+    "model": "models/soundbarmax.glb"
+  },
+  {
+    "id": 25,
+    "name": "AI 홈 프로젝터",
+    "category": "tv",
+    "price": 1190000,
+    "desc": "AI 자동 화면 보정 기능 탑재.",
+    "image": "img/tv_projector.png",
+    "model": "models/projector.glb"
+  }
+]
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,93 @@
+
+<html>
+  <head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@7.0.0/dist/aframe-extras.min.js"></script>
+    
+  </head>
+  
+
+
+
+  <body>
+
+<div id="scanning" class="hidden" style="text-align: center;">
+  <canvas id="custom-loading" width="400" height="800" style="
+    pointer-events: none;
+    background: transparent;
+    display: block;
+    margin: 0 auto;
+  "></canvas>
+</div>
+
+      
+<header id="header">  
+    삼전
+</header>
+ 
+
+         <!-- 판타지 느낌 아이콘  -->
+ <a-scene 
+  mindar-image="imageTargetSrc: ./mind/new.mind;filterMinCF:0.0001;filterBeta:0.3; uiScanning: #scanning; maxTrack: 12" 
+  color-space="sRGB" 
+  renderer=" colorManagement: true; physicallyCorrectLights: true; antialias: true" 
+  vr-mode-ui="enabled: false" 
+  device-orientation-permission-ui="enabled: false">
+<!-- uiError: no; uiLoading: no 스켄이랑 에러 화면 숨기기 -->
+
+
+  <a-assets>
+
+    <a-asset-item id="p-cat" src="./gltf/cat-glb/p-cat.glb" />
+    <a-asset-item id="cat-glb" src="./gltf/cat-glb/cat-glb.glb" />
+           
+    <!-- 모델 분류 하는 곳 id: 객체 이름, src: 경로 -->
+  </a-assets>
+  <!-- mind 객체 탐지 준비 -->
+
+  <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+
+
+
+
+
+<!-- --------------------------------------------------------------------------------------모델 넣는 곳 -->
+
+    <a-entity mindar-image-target="targetIndex: 0" play-video-on-target>
+    <!-- 기본 방향광 -->
+      <a-entity light="type: directional; intensity: 6; color: #ffffff" position="0 4 20"></a-entity>
+      <a-entity light="type: directional; intensity: 3; color: #ff8800" position="0 -3 10"></a-entity>
+
+      <!-- 주변광 -->
+      <a-entity light="type: ambient; intensity: 1.5; color: #aa66ff"></a-entity>
+
+      <a-gltf-model rotation="0 0 0 " position="0 0 0.2" scale="0.5 0.5 0.5" src="#p-cat"/>
+    </a-entity>
+   
+    <!-- mindar-image-target에 각각 번호 부여 
+    사진을 정면으로 봤을 때 0 1 2 라고 치면 
+    1은 세로로 그니깐 상단쪽이 하늘을 보게 됨 
+    2는 반시계로 돎 
+    -->
+  
+
+  <a-entity mindar-image-target="targetIndex: 1" play-video-on-target>
+    <!-- 기본 방향광 -->
+<a-entity light="type: directional; intensity: 6; color: #ffffff" position="0 4 20"></a-entity>
+<a-entity light="type: directional; intensity: 3; color: #ff8800" position="0 -3 10"></a-entity>
+
+<!-- 주변광 -->
+<a-entity light="type: ambient; intensity: 1.5; color: #aa66ff"></a-entity>
+
+    <a-gltf-model rotation="0 0 0 " position="0 0 0.2" scale="0.5 0.5 0.5" src="#cat-glb"/>
+  </a-entity>
+
+
+</a-scene>
+
+  </body>
+ 
+</html>
