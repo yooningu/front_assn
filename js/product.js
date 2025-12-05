@@ -96,7 +96,7 @@ function loadModel(modelPath) {
 
     function animate() {
       requestAnimationFrame(animate);
-      model.rotation.y += 0.05;
+      model.rotation.y += 0.1;
       renderer.render(scene, camera);
     }
 
