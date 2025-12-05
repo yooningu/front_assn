@@ -65,7 +65,7 @@ function loadModel(modelPath) {
   const camera = new THREE.PerspectiveCamera(45, 1, 0.1, 1000);
   camera.position.set(0, 1.2, 3);
 
-  // 🔆 전체를 그냥 밝게 만들어주는 조명 2개만 사용
+  //  전체를 그냥 밝게 만들어주는 조명 2개만 사용
   // 위/아래 색 거의 비슷하게 해서 톤 차이를 줄임
   const hemiLight = new THREE.HemisphereLight(0xffffff, 0xffffff, 1.5);
   hemiLight.position.set(0, 2, 0);
@@ -96,7 +96,7 @@ function loadModel(modelPath) {
 
     function animate() {
       requestAnimationFrame(animate);
-      model.rotation.y += 0.005;
+      model.rotation.y += 0.05;
       renderer.render(scene, camera);
     }
 

@@ -12,6 +12,7 @@ function loadCart() {
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
   fetch("data/products.json")
+  // 비동기
     .then(res => res.json())
     .then(products => {
       productsCache = products;
