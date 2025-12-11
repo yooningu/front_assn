@@ -1,0 +1,168 @@
+
+/* 상품 상세 페이지 */
+.product-detail-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+
+  min-height: 500px;
+
+  position: relative;
+  margin-right: 20vw;   /* 화면 오른쪽 20%는 info 영역으로 비워두기 */
+}
+
+.product-visual {
+  display: flex;                /* 안에서 이미지+캔버스 정렬 */
+  flex-direction: column;
+  justify-content: flex-start;
+  flex: 1 1 auto;
+}
+
+.product-detail-img {
+  width: 100%;
+  object-fit: contain;
+  margin-top: 10px;
+}
+
+#modelCanvas {
+  width: 100%;
+  height: auto;
+  display: inline;
+  background: #ffffff;
+  border: 1px solid black;
+  margin-top: 10px;
+}
+
+.product-info {
+  position: fixed;      /* 스크롤해도 고정 */
+  right: 0;
+  width: 20vw;          /* 화면 너비의 20% */
+  height: 100%;
+  text-align: right;
+  background: #ffffff;
+  padding: 16px;
+  box-shadow: -4px 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.product-detail-price {
+  margin-top: 8px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.add-cart-btn {
+  margin-top: 16px;
+  padding: 10px 16px;
+  border-radius: 6px;
+  background: #0066d9;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+/* 아래 광고 영역 */
+.product-ad {
+  background-color: black;
+  text-align: center;
+  width: 100%;
+}
+
+.adi {
+  width: 90%;
+}
+
+.adt {
+  color: white;
+  margin: 150px 0;
+  font-size: 12px;
+}
+
+.adt span {
+  font-size: 22px;
+}
+
+.adt h1 {
+  font-size: 40px;
+}
+
+@media (max-width: 768px) {
+    .product-detail-container{
+        margin: 10px;
+    }
+  .product-info {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+ height: 8%;
+    width: 100%;
+    background: #ffffff;
+    padding: 12px 16px;
+    box-shadow: 0 -3px 10px rgba(0,0,0,0.15);
+
+    display: flex;          /* 왼쪽 텍스트 / 오른쪽 버튼 2칸 */
+    gap: 8px;
+
+    top: auto;
+  }
+
+  /* 왼쪽 75%: 텍스트 영역 */
+  .product-info > div:first-child {
+    flex: 0 0 75%;
+    display: grid;          /* 제목/가격/설명을 그리드로 배치 */
+    grid-template-columns: 1fr 1fr; /* 왼쪽: 제목 / 오른쪽: 가격 */
+    grid-template-rows: auto auto;  /* 1행: 제목+가격, 2행: 설명 */
+    row-gap: 4px;
+  }
+
+  /* 오른쪽 25%: 버튼 영역 */
+  .product-info > div:last-child {
+    flex: 0 0 25%;
+    display: flex;
+    justify-content: flex-end;  /* 버튼을 오른쪽으로 */
+    align-items: center;        /* 세로 가운데 정렬 */
+  }
+
+  /* 1번 칸: 제목 (왼쪽 상단) */
+  .product-info h2 {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    margin: 0;
+    font-size: 15px;
+    text-align: left;
+    white-space: nowrap;        /* 너무 길면 줄바꿈 막고 싶으면 유지,
+                                   줄바꿈 허용하고 싶으면 이 줄 지워도 됨 */
+  }
+
+  /* 2번 칸: 가격 (오른쪽 상단) */
+  .product-detail-price {
+    grid-column: 2 / 2;
+    grid-row: 1 / 2;
+    margin: 0;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: right;
+    white-space: nowrap;
+  }
+
+  /* 4,5번 칸: 설명 (아래, 왼쪽 정렬 / 두 칸 전체 차지) */
+  #productDesc {
+    grid-column: 1 / 3;      /* 1~2열 전체 사용 */
+    grid-row: 2 / 3;
+    margin: 0;
+    font-size: 12px;
+    text-align: left;
+    line-height: 1.4;
+  }
+
+  /* 오른쪽 버튼 (3,6번 영역) */
+  .add-cart-btn {
+    width: 100%;             /* 버튼이 오른쪽 25% 영역 꽉 채우게 */
+    padding: 10px 14px;
+    font-size: 14px;
+    white-space: nowrap;
+  }
+}

@@ -6,7 +6,12 @@
     "price": 1990000,
     "desc": "강력한 AI 성능과 더 얇아진 프레임을 가진 폴더블 스마트폰.",
     "image": "https://images.samsung.com/kdp/goods/2025/07/03/8b272cf8-0834-4107-a75f-c5afa2b325c5.jpg",
-    "model": "glb/p1.glb"
+    "model": "glb/p1.glb",
+    "ad1": "https://images.samsung.com/kdp/static/pd/banner/SM-S938N_web_00_KV_CTA_0117.jpg",
+    "ad2": "https://images.samsung.com/kdp/cms_task/C20250110010009/3145/21d27174-4958-4556-b1f9-a2e29c88d2d3.jpg?$ORIGIN_JPG$",
+    "ad3": "https://images.samsung.com/kdp/cms_task/C20250113010005/3194/d67a23c2-1c49-4865-9c12-b0cd57aa2b4c.jpg?$FB_TYPE_A_JPG$",
+    "adm1": "https://images.samsung.com/kdp/cms_task/C20250403000022/22155/f01489ca-3d96-4c34-aa2c-01b486e93833.mp4",
+    "adm2": "https://images.samsung.com/kdp/cms_task/C20250131000100/20097/79a1f0e4-8928-419d-b286-283e8870c989.mp4"
   },
   {
     "id": 2,

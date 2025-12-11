@@ -200,175 +200,6 @@ button {
   gap: 6px;
 }
 
-.recommend-slider-window {
-  overflow-x: auto;
-}
-
-.recommend-slider-track {
-  gap: 12px;
-}
-
-/* 상품 카드 */
-.product-card {
-  flex: 0 0 220px;
-  flex-direction: column;
-  gap: 8px;
-  cursor: pointer;
-}
-
-.product-card img {
-  width: 100%;
-  height: 150px;
-  object-fit: contain;
-}
-
-.product-name {
-  font-size: 14px;
-  font-weight: 600;
-}
-
-.product-price {
-  font-size: 14px;
-  color: #444;
-}
-
-/* 광고 섹션 */
-.section-ads h2 {
-  margin-bottom: 10px;
-}
-
-.ad-image-wrap {
-  width: 100%;
-  margin-bottom: 16px;
-}
-
-.ad-img {
-  width: 100%;
-  display: block;
-  border-radius: 10px;
-}
-
-/* 상품 리스트 페이지 */
-.product-list-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 16px;
-}
-
-/* 상품 상세 페이지 */
-.product-detail-container {
-    display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
-
-  /* 🔽 최소 높이 한 번 박아주기 (PC 기준) */
-  min-height: 500px;
-}
-
-.product-visual {
- flex: 0 0 400px;              /* 가로 400 정도 */
-  display: flex;                /* 안에서 이미지+캔버스 정렬 */
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-.product-detail-img{
-width: 100%;
-  max-height: 220px;
-  object-fit: contain;
-  margin-top: 10px;}
-#modelCanvas {
-   width: 100%;
-  height: 260px;               /* 원하는 값으로 조절 (전체 500 내에서) */
-  display: block;
-  background: #ffffff;
-  border: 1px solid black;
-  margin-top: 10px;
-}
-
-.product-info {
-  flex: 1;
-  min-width: 260px;
-}
-
-.product-detail-price {
-  margin-top: 8px;
-  font-size: 18px;
-  font-weight: 700;
-}
-
-.add-cart-btn {
-  margin-top: 16px;
-  padding: 10px 16px;
-  border-radius: 6px;
-  background: #0066d9;
-  color: #fff;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-}
-
-/* 장바구니 */
-.cart-list {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.cart-item-img {
-  width: 64px;
-  height: 64px;
-  object-fit: contain;
-  margin-right: 10px;
-}
-
-.cart-item-info {
-  flex: 1;
-}
-
-.cart-item-qty {
-  gap: 6px;
-  margin-right: 10px;
-}
-
-.qty-btn {
-  width: 24px;
-  height: 24px;
-  border-radius: 4px;
-  background: #eee;
-}
-
-.qty {
-  min-width: 20px;
-  text-align: center;
-}
-
-.cart-bottom {
-  margin-top: 16px;
-  text-align: right;
-}
-
-.btn-purchase-all {
-  width: 100%;
-  margin-top: 8px;
-  padding: 10px;
-  border-radius: 6px;
-  background: #0078ff;
-  color: #fff;
-  font-size: 15px;
-}
-
-/* 푸터 */
-.site-footer {
-  margin-top: auto;
-  padding: 16px;
-  text-align: center;
-  font-size: 12px;
-  color: #888;
-  border-top: 1px solid #eee;
-
-}
-
 /* 반응형 */
 @media (max-width: 768px) {
   .main-nav {
@@ -396,4 +227,15 @@ width: 100%;
   }
   
   
+}
+
+/* 푸터 */
+.site-footer {
+  margin-top: auto;
+  padding: 16px;
+  text-align: center;
+  font-size: 12px;
+  color: #888;
+  border-top: 1px solid #eee;
+
 }
