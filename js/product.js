@@ -111,7 +111,7 @@ function loadModel(modelPath) {
       });
 
       // 기본 스케일
-      model.scale.set(0.4, 0.4, 0.4);
+      model.scale.set(2, 2, 2);
       scene.add(model);
 
       // -------------------------

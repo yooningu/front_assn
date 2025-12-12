@@ -26,10 +26,15 @@
 
 #modelCanvas {
   width: 100%;
-  display: block;
+  height: auto;    /* 이건 놔둬도 됨 */
+  display: block;  /* ★ 이걸로 바꾸기 (또는 flex) */
   background: #ffffff;
   border: 1px solid black;
   margin-top: 10px;
+}
+
+  .product-model {
+  flex: 1 0 100%;   /* 부모(.product-detail-container) 기준 100% */
 }
 
 .product-info {
@@ -49,17 +54,19 @@
   font-weight: 700;
 }
 
-.add-cart-btn {
+.add-btn {
   margin-top: 16px;
   padding: 10px 16px;
   border-radius: 6px;
   background: #0066d9;
   color: #fff;
   display: inline-flex;
-  align-items: center;
+  align-items: center;       /* 세로 가운데 */
+  justify-content: center;   /* 가로 가운데 */
   gap: 6px;
   border: none;
   cursor: pointer;
+  width: 120px;
 }
 
 /* 아래 광고 영역 */
@@ -88,78 +95,76 @@
 }
 
 @media (max-width: 768px) {
-    .product-detail-container{
-        margin: 10px;
-    }
+
+  .product-detail-container {
+    width: 100%;
+  }
+  /* product-info 전체 부모 */
   .product-info {
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
- height: 8%;
+    height: auto;
     width: 100%;
-    background: #ffffff;
     padding: 12px 16px;
+
+    background: #ffffff;
     box-shadow: 0 -3px 10px rgba(0,0,0,0.15);
 
-    display: flex;          /* 왼쪽 텍스트 / 오른쪽 버튼 2칸 */
-    gap: 8px;
-
-    top: auto;
-  }
-
-  /* 왼쪽 75%: 텍스트 영역 */
-  .product-info > div:first-child {
-    flex: 0 0 75%;
-    display: grid;          /* 제목/가격/설명을 그리드로 배치 */
-    grid-template-columns: 1fr 1fr; /* 왼쪽: 제목 / 오른쪽: 가격 */
-    grid-template-rows: auto auto;  /* 1행: 제목+가격, 2행: 설명 */
-    row-gap: 4px;
-  }
-
-  /* 오른쪽 25%: 버튼 영역 */
-  .product-info > div:last-child {
-    width: 25%;
     display: flex;
-    justify-content: flex-end;  /* 버튼을 오른쪽으로 */
-    align-items: center;        /* 세로 가운데 정렬 */
+    flex-direction: column;
+    gap: 8px;
   }
 
-  /* 1번 칸: 제목 (왼쪽 상단) */
-  .product-info h2 {
- 
+  /* -------------------------------
+     1) 첫 번째 div = 제목 + 가격
+     ------------------------------- */
+  .product-info > div:nth-child(1) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .product-info > div:nth-child(1) h2 {
     margin: 0;
     font-size: 15px;
-    text-align: left;
-    white-space: nowrap;        /* 너무 길면 줄바꿈 막고 싶으면 유지,
-                                   줄바꿈 허용하고 싶으면 이 줄 지워도 됨 */
+    white-space: nowrap;
   }
 
-  /* 2번 칸: 가격 (오른쪽 상단) */
-  .product-detail-price {
- 
+  .product-info > div:nth-child(1) .product-detail-price {
     margin: 0;
     font-size: 15px;
     font-weight: 700;
-    text-align: right;
     white-space: nowrap;
+    text-align: right;
   }
 
-  /* 4,5번 칸: 설명 (아래, 왼쪽 정렬 / 두 칸 전체 차지) */
-  #productDesc {
-    grid-column: 1 / 3;      /* 1~2열 전체 사용 */
-    grid-row: 2 / 3;
-    margin: 0;
+  /* -------------------------------
+     2) 두 번째 div = 설명
+     ------------------------------- */
+  .product-info > div:nth-child(2) p {
     font-size: 12px;
-    text-align: left;
     line-height: 1.4;
+    margin: 0;
+    text-align: left;
   }
 
- 
-  .add-cart-btn {
-    width: 100%;             /* 버튼이 오른쪽 25% 영역 꽉 채우게 */
+  /* -------------------------------
+     3) 세 번째 div = 버튼 2개
+     ------------------------------- */
+  .product-info > div:nth-child(3) {
+    display: flex;
+    gap: 8px;
+  }
+
+  .product-info > div:nth-child(3) .add-btn {
+    flex: 1;
     padding: 10px 14px;
     font-size: 12px;
     white-space: nowrap;
+  }
+  .site-footer{
+    margin-bottom: 200px;
   }
 }
