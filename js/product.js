@@ -64,30 +64,27 @@ function loadProduct(productId) {
 
 
 
-
-
-/* ======================================
-   Three.js 모델 로더
-====================================== */
-/* ======================================
-   Three.js 모델 로더 (반응형 버전)
-====================================== */
 function loadModel(modelPath) {
   const canvas = document.getElementById("modelCanvas");
+
+  // 캔버스의 실제 픽셀 크기(PC/모바일 공통)
+  const width  = canvas.clientWidth;
+  const height = canvas.clientHeight;
+
+  // 렌더러
   const renderer = new THREE.WebGLRenderer({
     canvas,
     alpha: true,
-    antialias: true
+    antialias: true,
   });
   renderer.setPixelRatio(window.devicePixelRatio);
+  renderer.setSize(width, height, false);
+  renderer.setClearColor(0xffffff, 1); // 흰 배경
 
-  // 배경 흰색 + 불투명
-  renderer.setClearColor(0xffffff, 1);
-
+  // 씬 + 카메라
   const scene = new THREE.Scene();
-
-  const camera = new THREE.PerspectiveCamera(45, 1, 0.1, 1000);
-  camera.position.set(0, 1.2, 3);
+  const camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 3000);
+  camera.position.set(0, 0, 5);
 
   // 조명
   const hemiLight = new THREE.HemisphereLight(0xffffff, 0xffffff, 1.5);
@@ -98,45 +95,66 @@ function loadModel(modelPath) {
   scene.add(ambient);
 
   const loader = new THREE.GLTFLoader();
-  loader.load(modelPath, (gltf) => {
-    const model = gltf.scene;
+  loader.load(
+    modelPath,
+    (gltf) => {
+      const model = gltf.scene;
 
-    // 재질 보정
-    model.traverse((child) => {
-      if (child.isMesh && child.material) {
-        child.material.side = THREE.DoubleSide;
-        if (child.material.color) {
-          child.material.color.offsetHSL(0, 0, 0.1);
+      // 재질 보정
+      model.traverse((child) => {
+        if (child.isMesh && child.material) {
+          child.material.side = THREE.DoubleSide;
+          if (child.material.color) {
+            child.material.color.offsetHSL(0, 0, 0.1);
+          }
         }
+      });
+
+      // 기본 스케일
+      model.scale.set(0.4, 0.4, 0.4);
+      scene.add(model);
+
+      // -------------------------
+      // 1) 박스로 크기/중심 계산
+      // -------------------------
+      const box = new THREE.Box3().setFromObject(model);
+      const size = box.getSize(new THREE.Vector3());
+      const center = box.getCenter(new THREE.Vector3());
+
+      // 중심을 (0,0,0)에 맞추기
+      model.position.x -= center.x;
+      model.position.y -= center.y;
+      model.position.z -= center.z;
+
+      // 세로 길이를 기준으로 카메라 거리 계산
+      const fov = camera.fov * (Math.PI / 180); // 라디안
+      const fullHeight = size.y;
+      let distance = (fullHeight / 2) / Math.tan(fov / 2);
+
+      // 여유 공간 넉넉하게 (짤리면 이 숫자를 더 키우면 됨)
+      distance *= 2.0;
+
+      camera.position.set(0, 0, distance);
+      camera.lookAt(0, 0, 0);
+
+      // -------------------------
+      // 2) 애니메이션
+      // -------------------------
+      function animate() {
+        requestAnimationFrame(animate);
+        model.rotation.y += 0.02;
+        renderer.render(scene, camera);
       }
-    });
 
-    model.scale.set(0.4, 0.4, 0.4);
-    model.position.set(0, 0, 0);
-    scene.add(model);
-
-   
-    function resizeRenderer() {
-      const width = canvas.clientWidth;  // 가로 100%
-      const height = width * 1;          // 높이 = 가로 × 1(정사각형 비율)
-      renderer.setSize(width, height, false);
-
-      camera.aspect = width / height;
-      camera.updateProjectionMatrix();
+      animate();
+    },
+    undefined,
+    (err) => {
+      console.error("모델 로드 실패:", err);
     }
-
-    resizeRenderer();
-    window.addEventListener("resize", resizeRenderer);
-
-    function animate() {
-      requestAnimationFrame(animate);
-      model.rotation.y += 0.02;
-      renderer.render(scene, camera);
-    }
-
-    animate();
-  });
+  );
 }
+
 
 
 

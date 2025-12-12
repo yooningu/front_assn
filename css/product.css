@@ -26,8 +26,7 @@
 
 #modelCanvas {
   width: 100%;
-  height: auto;
-  display: inline;
+  display: block;
   background: #ffffff;
   border: 1px solid black;
   margin-top: 10px;
@@ -120,7 +119,7 @@
 
   /* 오른쪽 25%: 버튼 영역 */
   .product-info > div:last-child {
-    flex: 0 0 25%;
+    width: 25%;
     display: flex;
     justify-content: flex-end;  /* 버튼을 오른쪽으로 */
     align-items: center;        /* 세로 가운데 정렬 */
@@ -128,8 +127,7 @@
 
   /* 1번 칸: 제목 (왼쪽 상단) */
   .product-info h2 {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
+ 
     margin: 0;
     font-size: 15px;
     text-align: left;
@@ -139,8 +137,7 @@
 
   /* 2번 칸: 가격 (오른쪽 상단) */
   .product-detail-price {
-    grid-column: 2 / 2;
-    grid-row: 1 / 2;
+ 
     margin: 0;
     font-size: 15px;
     font-weight: 700;
@@ -158,11 +155,11 @@
     line-height: 1.4;
   }
 
-  /* 오른쪽 버튼 (3,6번 영역) */
+ 
   .add-cart-btn {
     width: 100%;             /* 버튼이 오른쪽 25% 영역 꽉 채우게 */
     padding: 10px 14px;
-    font-size: 14px;
+    font-size: 12px;
     white-space: nowrap;
   }
 }

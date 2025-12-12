@@ -99,7 +99,7 @@ window.searchByName = function (keyword) {
   renderRecommendList(filtered);
 };
 
-// 🔹 슬라이더 (그대로 사용)
+//  슬라이더 (그대로 사용)
 function setupRecommendSlider() {
   const $window = $(".recommend-slider-window");
 
