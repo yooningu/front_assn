@@ -1,9 +1,0 @@
-
-
-/* 상품 리스트 페이지 */
-.product-list-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 16px;
-}
-

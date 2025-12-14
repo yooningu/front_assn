@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-// 🔹 추천 상품 로딩
+//  추천 상품 로딩
 function loadRecommendedProducts() {
     // 제이슨 파일 읽기
   $.getJSON("data/products.json", function (products) {
@@ -34,38 +34,47 @@ function loadRecommendedProducts() {
 
 
 
-// 🔹 추천 영역 렌더링만 담당하는 함수
+//  추천 영역 렌더링만 담당하는 함수
 function renderRecommendList(list) {
-  // id가 ~ 인거 가져옴
   const $track = $("#recommend-track");
   let html = "";
-  // forEach(반복 실행)
+
   list.forEach((p) => {
     html += `
       <article class="product-card" data-id="${p.id}">
         <img src="${p.image}" alt="${p.name}">
         <div class="product-name">${p.name}</div>
         <div class="product-price">${p.price.toLocaleString()}원</div>
+
+        <!--  장바구니 버튼 -->
+        <button class="add-cart-btn" data-id="${p.id}">
+          장바구니 담기
+        </button>
       </article>
     `;
   });
-   // 추가하기
+
   $track.html(html);
 
-  // 카드 클릭 상세페이지 이동
-  $track.off("click").on("click", ".product-card", function () {
+  //  카드 클릭 → 상세페이지 이동
+  $track.off("click.card").on("click.card", ".product-card", function (e) {
+    // 버튼 클릭은 막기
+    if ($(e.target).hasClass("add-cart-btn")) return;
     const id = $(this).data("id");
     window.location.href = `product.html?id=${id}`;
   });
 
-  // 제목 바꾸기
+  // 장바구니 버튼 클릭
+  $track.off("click.cart").on("click.cart", ".add-cart-btn", function (e) {
+    const id = $(this).data("id");
+    addToCart(id);
+    alert("장바구니에 담았습니다!");
+  });
+
+  // 제목 변경
   const titleEl = document.querySelector(".section-recommend h2");
   if (titleEl) {
-    if (list === originalRecommend) {
-      titleEl.textContent = "추천 상품";
-    } else {
-      titleEl.textContent = "검색 결과";
-    }
+    titleEl.textContent = list === originalRecommend ? "추천 상품" : "검색 결과";
   }
 }
 

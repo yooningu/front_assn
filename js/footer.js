@@ -1,7 +1,7 @@
 function renderFooter() {
   const footerHTML = `
     <footer class="site-footer">
-      © 2025 SAMJUNG. All Rights Reserved.
+      © 2025 SAMSUNG. All Rights Reserved.
     </footer>
   `;
   document.body.insertAdjacentHTML("beforeend", footerHTML);

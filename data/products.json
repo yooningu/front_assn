@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "name": "SJ Fold X",
+    "name": "Fold X",
     "category": "mobile",
     "price": 1990000,
     "desc": "강력한 AI 성능과 더 얇아진 프레임을 가진 폴더블 스마트폰.",
@@ -15,75 +15,80 @@
   },
   {
     "id": 2,
-    "name": "SJ Galaxy S25 Ultra",
+    "name": "Galaxy Fold 7",
     "category": "mobile",
     "price": 1590000,
     "desc": "2억 화소 카메라와 초고속 AP를 탑재한 플래그십 스마트폰.",
-    "image": "img/mobile_s25ultra.png",
+    "image": "https://images.samsung.com/kdp/goods/2025/07/03/2af2533b-4309-431a-92b8-73d7513454a1.png?$Q90_330_330_F_PNG$",
     "model": "models/s25ultra.glb"
   },
   {
     "id": 3,
-    "name": "SJ Galaxy A35",
+    "name": "Galaxy A35",
     "category": "mobile",
     "price": 420000,
     "desc": "합리적인 가격의 A 시리즈 스마트폰.",
-    "image": "img/mobile_a35.png",
+    "image": "https://images.samsung.com/kdp/goods/2025/04/23/88ddbf8c-aa06-4743-842a-14df1d949a91.png?$Q90_330_330_F_PNG$",
     "model": "models/a35.glb"
   },
   {
     "id": 4,
-    "name": "SJ Buds Pro",
+    "name": "Buds Pro",
     "category": "mobile",
     "price": 249000,
     "desc": "프리미엄 노이즈 캔슬링 무선 이어폰.",
-    "image": "img/mobile_budspro.png",
+    "image": "https://images.samsung.com/kdp/goods/2025/09/08/86afadc6-2aa7-4f65-b944-6bd28dd1a632.png?$Q90_330_330_F_PNG$",
     "model": "models/budspro.glb"
   },
   {
     "id": 5,
-    "name": "SJ Smart Watch 6",
+    "name": "Smart Watch 6",
     "category": "mobile",
     "price": 398000,
     "desc": "체성분 측정이 가능한 차세대 스마트워치.",
-    "image": "img/mobile_watch6.png",
-    "model": "models/watch6.glb"
+    "image": "https://images.samsung.com/kdp/goods/2025/07/03/61a2a330-893e-4855-8e52-2fa8c794d148.png",
+    "model": "./glb/smart_watch_kw_19.glb",
+    "ad1": "https://images.samsung.com/kdp/static/pd/watches/galaxy-watch/images/pd-kv-galaxy-watch8-classic-pc-kv-img.jpg",
+    "ad2": "https://images.samsung.com/kdp/cms_task/C20250627000131/27850/99c5ac7d-77bc-4593-b97d-f6f45be417a1.jpg?$FB_TYPE_A_JPG$",
+    "ad3": "https://images.samsung.com/kdp/cms_task/C20250627000136/27855/c910ff10-6a6e-49ee-bbdf-49479e800f3b.jpg?$FB_TYPE_A_JPG$",
+    "adm1": "https://images.samsung.com/kdp/cms_task/C20250403000022/22155/f01489ca-3d96-4c34-aa2c-01b486e93833.mp4",
+    "adm2": "https://images.samsung.com/kdp/cms_task/C20250131000100/20097/79a1f0e4-8928-419d-b286-283e8870c989.mp4"
   },
 
   {
     "id": 6,
-    "name": "SJ Book Pro 16",
+    "name": "Book Pro 16",
     "category": "pc",
     "price": 2190000,
     "desc": "초경량 고성능 노트북. 전문가용 작업에 최적화.",
-    "image": "img/pc_bookpro16.png",
+    "image": "https://images.samsung.com/kdp/goods/2025/08/25/902be589-8e3d-4d75-b713-e5b1bc266c41.png?$Q90_330_330_F_PNG$",
     "model": "models/bookpro16.glb"
   },
   {
     "id": 7,
-    "name": "SJ Odyssey Gaming 5",
+    "name": "Odyssey Gaming 5",
     "category": "pc",
     "price": 1890000,
     "desc": "최신 GPU 기반의 고성능 게이밍 데스크탑.",
-    "image": "img/pc_odyssey5.png",
+    "image": "https://images.samsung.com/kdp/goods/2025/09/23/bd1a8695-1ae3-44ad-b0e4-19455108492c.png?$Q90_330_330_F_PNG$",
     "model": "models/odyssey5.glb"
   },
   {
     "id": 8,
-    "name": "SJ All-in-One 27",
+    "name": "All-in-One 27",
     "category": "pc",
     "price": 1340000,
     "desc": "27인치 올인원 PC로 깔끔한 책상 구성을 지원.",
-    "image": "img/pc_aio27.png",
+    "image": "https://images.samsung.com/kdp/goods/2024/04/05/a9dd6ef6-33ff-4ce0-a50a-5c8020c26d61.png?$Q90_330_330_F_PNG$",
     "model": "models/aio27.glb"
   },
   {
     "id": 9,
-    "name": "SJ Portable Monitor 15",
+    "name": "Portable Monitor 15",
     "category": "pc",
     "price": 320000,
     "desc": "휴대용 USB-C 모니터.",
-    "image": "img/pc_portable15.png",
+    "image": "https://images.samsung.com/kdp/goods/2025/02/26/4f0b27c4-14e5-4440-a209-b4fdd1251cd2.png?$Q90_330_330_F_PNG$",
     "model": "models/portable15.glb"
   },
   {
@@ -92,7 +97,7 @@
     "category": "pc",
     "price": 129000,
     "desc": "기계식 RGB 키보드.",
-    "image": "img/pc_keyboardk8.png",
+    "image": "https://images.samsung.com/is/image/samsung/sec-srp-9400b-srp-9400b-black-thumb-87630456?$Q90_330_330_F_PNG$",
     "model": "models/keyboardk8.glb"
   },
 
@@ -102,7 +107,7 @@
     "category": "living",
     "price": 3190000,
     "desc": "AI 식재료 관리 기능을 갖춘 프리미엄 냉장고.",
-    "image": "img/living_fridge4door.png",
+    "image": "https://images.samsung.com/kdp/goods/2025/03/12/3a4cd3c9-b6d4-4e6e-821b-9b35fad26c9a.png?$Q90_330_330_F_PNG$",
     "model": "models/fridge4door.glb"
   },
   {
@@ -111,7 +116,7 @@
     "category": "living",
     "price": 1590000,
     "desc": "의류 먼지제거 및 스팀 살균 기능.",
-    "image": "img/living_closet.png",
+    "image": "https://images.samsung.com/kdp/goods/2023/01/25/45896df4-d849-4b0c-95cc-f7513087a460.png?$Q90_330_330_F_PNG$",
     "model": "models/closet.glb"
   },
   {
@@ -120,7 +125,7 @@
     "category": "living",
     "price": 890000,
     "desc": "초미세먼지 자동 감지 공기청정기.",
-    "image": "img/living_airpurifier.png",
+    "image": "https://images.samsung.com/kdp/goods/2025/10/30/4a50fa50-a28e-49b6-b975-8c199356e696.png?$Q90_330_330_F_PNG$",
     "model": "models/airpurifier.glb"
   },
   {
@@ -129,7 +134,7 @@
     "category": "living",
     "price": 780000,
     "desc": "AI 맵핑 기능이 추가된 최신 로봇청소기.",
-    "image": "img/living_robot.png",
+    "image": "https://images.samsung.com/kdp/goods/2024/04/23/cdbc151e-b909-478f-b978-4afd05d51bc6.png?$Q90_330_330_F_PNG$",
     "model": "models/robot.glb"
   },
   {
@@ -138,7 +143,7 @@
     "category": "living",
     "price": 590000,
     "desc": "슬림한 디자인의 정수기.",
-    "image": "img/living_waterpurifier.png",
+    "image": "https://images.samsung.com/kdp/goods/2025/07/24/bf839e31-379c-4e6e-a170-471de601bfd7.png?$Q90_330_330_F_PNG$",
     "model": "models/waterpurifier.glb"
   },
 
@@ -148,7 +153,7 @@
     "category": "kitchen",
     "price": 1290000,
     "desc": "AI 온도 제어가 가능한 고급 인덕션.",
-    "image": "img/kitchen_induction.png",
+    "image": "https://images.samsung.com/kdp/goods/2025/07/25/70288b66-468d-4468-bd9a-d296586e1d0c.png?$Q90_330_330_F_PNG$",
     "model": "models/induction.glb"
   },
   {
@@ -157,7 +162,7 @@
     "category": "kitchen",
     "price": 990000,
     "desc": "초고압 세척이 가능한 프리미엄 식기세척기.",
-    "image": "img/kitchen_dishwasher.png",
+    "image": "https://images.samsung.com/kdp/goods/2025/06/25/ece21fcf-c95b-486e-8356-82ad7d9bb0d1.png?$Q90_330_330_F_PNG$",
     "model": "models/dishwasher.glb"
   },
   {
@@ -166,7 +171,7 @@
     "category": "kitchen",
     "price": 670000,
     "desc": "30리터 대용량 오븐.",
-    "image": "img/kitchen_oven.png",
+    "image": "https://images.samsung.com/kdp/goods/2022/07/06/12350b33-c394-4c4b-9c91-6bddd67dbd82.png?$Q90_330_330_F_PNG$",
     "model": "models/oven.glb"
   },
   {
@@ -175,7 +180,7 @@
     "category": "kitchen",
     "price": 540000,
     "desc": "원두별 AI 추출 기능 탑재.",
-    "image": "img/kitchen_coffeemachine.png",
+    "image": "https://images.samsung.com/kdp/goods/2024/05/31/6173f8ca-ef96-4f43-9599-23546cd444e7.png?$Q90_330_330_F_PNG$",
     "model": "models/coffeemachine.glb"
   },
   {
@@ -184,7 +189,7 @@
     "category": "kitchen",
     "price": 89000,
     "desc": "온도 조절 가능한 스마트 전기포트.",
-    "image": "img/kitchen_kettle.png",
+    "image": "https://images.samsung.com/kdp/goods/2022/05/25/d66c9ea7-0961-4a74-96f5-421ba531e1e5.png?$Q90_330_330_F_PNG$",
     "model": "models/kettle.glb"
   },
 
@@ -194,7 +199,7 @@
     "category": "tv",
     "price": 4200000,
     "desc": "생생한 화질의 QLED 8K TV.",
-    "image": "img/tv_qled8k.png",
+    "image": "https://images.samsung.com/kdp/goods/2025/03/05/8a201bf6-2a3c-4c85-ba94-c1bd13583e23.png?$Q90_330_330_F_PNG$",
     "model": "models/qled8k.glb"
   },
   {
@@ -203,7 +208,7 @@
     "category": "tv",
     "price": 3290000,
     "desc": "완벽한 블랙을 표현하는 OLED TV.",
-    "image": "img/tv_oled65.png",
+    "image": "https://images.samsung.com/kdp/goods/2025/11/06/b8e642e3-bf59-458c-a2f7-4266e3529394.png?$Q90_330_330_F_PNG$",
     "model": "models/oled65.glb"
   },
   {
@@ -212,7 +217,7 @@
     "category": "tv",
     "price": 790000,
     "desc": "선명한 색감을 제공하는 UHD TV.",
-    "image": "img/tv_crystal55.png",
+    "image": "https://images.samsung.com/kdp/goods/2025/10/30/1ba90c94-9342-4dcb-9fbe-890380e92ce0.png?$Q90_330_330_F_PNG$",
     "model": "models/crystal55.glb"
   },
   {
@@ -221,7 +226,7 @@
     "category": "tv",
     "price": 690000,
     "desc": "서라운드 AI 자동 음향 조절 사운드바.",
-    "image": "img/tv_soundbarmax.png",
+    "image": "https://images.samsung.com/kdp/goods/2025/10/22/92463f5f-62b3-4a58-90fe-0f09079f30e5.png?$Q90_330_330_F_PNG$",
     "model": "models/soundbarmax.glb"
   },
   {
@@ -230,7 +235,7 @@
     "category": "tv",
     "price": 1190000,
     "desc": "AI 자동 화면 보정 기능 탑재.",
-    "image": "img/tv_projector.png",
+    "image": "https://images.samsung.com/kdp/goods/2025/10/30/0c825e77-62dd-4f76-af85-a873ba4d0299.png?$Q90_330_330_F_PNG$",
     "model": "models/projector.glb"
   }
 ]

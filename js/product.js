@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const params = new URLSearchParams(location.search);
-  const productId = parseInt(params.get("id"), 10);
+  const productId = parseInt(params.get("id"));
 
   renderHeader(); // 공통 헤더 렌더링
 
@@ -13,51 +13,48 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-/* ======================================
-   상품 정보 로드
-====================================== */
-function loadProduct(productId) {
-  fetch("data/products.json")
-    .then(res => res.json())
-    .then(products => {
-      const product = products.find(p => p.id === productId);
 
-      if (!product) {
-        document.getElementById("productName").innerText = "상품 정보를 찾을 수 없습니다.";
-        return;
-      }
+  //  상품 정보 로드---------------------------
+
+function loadProduct(productId) {
+ $.getJSON("data/products.json", function (products) {
+
+    const product = products.find(p => p.id === productId);
+
+    if (!product) {
+      $("#productName").text("상품 정보를 찾을 수 없습니다.");
+      return;
+    }
 
       // DOM에 데이터 채우기
-      document.getElementById("productName").textContent = product.name;
-      document.getElementById("productDesc").textContent = product.desc;
-      document.getElementById("productPrice").textContent = product.price.toLocaleString() + "원";
-      document.getElementById("productImage").src = product.image;
-      document.getElementById("productImage").src = product.image;
+      $("#productName").text(product.name);
+      $("#productDesc").text(product.desc);
+      $("#productPrice").text(product.price.toLocaleString() + "원");
+      $("#productImage").attr("src", product.image);
+ 
 
 
 
-       document.getElementById("ad1").src = product.ad1;
-       document.getElementById("ad2").src = product.ad2;
-       document.getElementById("ad3").src = product.ad3;
-       document.getElementById("adm1").src = product.adm1;
-       document.getElementById("adm2").src = product.adm2;   
+      $("#ad1").attr("src", product.ad1);
+      $("#ad2").attr("src", product.ad2);
+      $("#ad3").attr("src", product.ad3);
+      $("#adm1").attr("src", product.adm1);
+      $("#adm2").attr("src", product.adm2);
 
 
       // 장바구니 버튼
-      const addCartBtn = document.getElementById("addCartBtn");
-      addCartBtn.addEventListener("click", () => {
+      $("#addCartBtn").on("click", function () {
         addToCart(product.id);
         alert("장바구니에 담겼습니다");
       });
         loadModel(product.model);
+
+
+        
     });
 }
 
-
-
-
-
-
+    
 
 
 
@@ -129,7 +126,7 @@ function loadModel(modelPath) {
       // 세로 길이를 기준으로 카메라 거리 계산
       const fov = camera.fov * (Math.PI / 180); // 라디안
       const fullHeight = size.y;
-      let distance = (fullHeight / 2) / Math.tan(fov / 2);
+      let distance = (fullHeight / 3) / Math.tan(fov / 2);
 
       // 여유 공간 넉넉하게 (짤리면 이 숫자를 더 키우면 됨)
       distance *= 2.0;

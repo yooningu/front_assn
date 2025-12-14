@@ -11,29 +11,25 @@ let productsCache = [];
 function loadCart() {
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-  fetch("data/products.json")
-  // 비동기
-    .then(res => res.json())
-    .then(products => {
-      productsCache = products;
+  $.getJSON("data/products.json", function (products) {
+    productsCache = products;
 
-      const listEl = document.getElementById("cartList");
-      listEl.innerHTML = "";
+    const $listEl = $("#cartList");
+    $listEl.empty();
 
-      if (cart.length === 0) {
-        listEl.innerHTML = `<p>장바구니가 비었습니다.</p>`;
-        updateCartCount();
-        updateTotal();
-        return;
-      }
+    if (cart.length === 0) {
+      $listEl.html("<p>장바구니가 비었습니다.</p>");
+      updateCartCount();
+      updateTotal();
+      return;
+    }
 
-      cart.forEach(item => {
-        const product = products.find(p => p.id === item.id);
-        if (!product) return;
+    cart.forEach(item => {
+      const product = products.find(p => p.id === item.id);
+      if (!product) return;
 
-        const div = document.createElement("div");
-        div.className = "cart-item";
-        div.innerHTML = `
+      const $div = $(`
+        <div class="cart-item">
           <img src="${product.image}" class="cart-item-img" />
 
           <div class="cart-item-info">
@@ -50,31 +46,32 @@ function loadCart() {
           <button class="remove-btn">
             <i data-lucide="trash-2"></i>
           </button>
-        `;
+        </div>
+      `);
 
-        listEl.appendChild(div);
+      $listEl.append($div);
 
-        // 수량 증가
-        div.querySelector(".plus").addEventListener("click", () => {
-          updateQty(product.id, item.qty + 1);
-        });
-
-        // 수량 감소
-        div.querySelector(".minus").addEventListener("click", () => {
-          if (item.qty > 1) {
-            updateQty(product.id, item.qty - 1);
-          }
-        });
-
-        // 삭제
-        div.querySelector(".remove-btn").addEventListener("click", () => {
-          removeItem(product.id);
-        });
+      // 수량 증가
+      $div.find(".plus").on("click", function () {
+        updateQty(product.id, item.qty + 1);
       });
 
-      lucide.createIcons();
-      updateTotal();
+      // 수량 감소
+      $div.find(".minus").on("click", function () {
+        if (item.qty > 1) {
+          updateQty(product.id, item.qty - 1);
+        }
+      });
+
+      // 삭제
+      $div.find(".remove-btn").on("click", function () {
+        removeItem(product.id);
+      });
     });
+
+    lucide.createIcons();
+    updateTotal();
+  });
 }
 
 /* ===============================
@@ -114,13 +111,13 @@ function updateTotal() {
     if (p) total += p.price * item.qty;
   });
 
-  document.getElementById("cartTotalPrice").textContent = total.toLocaleString();
+  $("#cartTotalPrice").text(total.toLocaleString());
 }
 
 /* ===============================
    모두 구매하기
 ================================ */
-document.getElementById("btnPurchaseAll")?.addEventListener("click", () => {
+$("#btnPurchaseAll").on("click", function () {
   alert("구매가 완료되었습니다");
   localStorage.removeItem("cart");
   updateCartCount();

@@ -36,19 +36,15 @@
 
       /* 4. 헤더는 위에 띄워서 덮는 느낌으로 */
       #header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 1000;
-        color: #fff;
-        background: rgba(0, 0, 0, 0.5);
-        padding: 8px 12px;
-        font-size: 16px;
+        width: 100%; height:auto; text-align: center;
+        background-color: #0052aa;
+        padding: 14px;
+        color: white;
       }
     </style>
 
     <script>
-      // 모바일 주소창 때문에 100vh가 잘 안 맞는 문제 해결
+      
       function setVh() {
         const vh = window.innerHeight * 0.01;
         document.documentElement.style.setProperty("--vh", `${vh}px`);
@@ -59,21 +55,21 @@
   </head>
 
   <body>
-    <header id="header">
-      삼전
+    <header id="header" >
+      smasung AR
     </header>
 
     <!-- AR 씬 -->
     <a-scene id="aaa"
-      mindar-image="imageTargetSrc: ./mind/new.mind;filterMinCF:0.0001;filterBeta:0.3; uiScanning: #scanning; maxTrack: 12"
+      mindar-image="imageTargetSrc: ./glb/targets.mind;filterMinCF:0.0001;filterBeta:0.3; uiScanning: #scanning; maxTrack: 12"
       color-space="sRGB"
       renderer=" colorManagement: true; physicallyCorrectLights: true; antialias: true"
       vr-mode-ui="enabled: false"
       device-orientation-permission-ui="enabled: false">
 
       <a-assets>
-        <a-asset-item id="p-cat" src="./glb/p1.glb"></a-asset-item>
-        <a-asset-item id="cat-glb" src="./glb/lods_-_samsung-7kg-ww70t4020cx.glb"></a-asset-item>
+        <a-asset-item id="p-cat" src="./glb/smart_watch_kw_19.glb"></a-asset-item>
+        <a-asset-item id="cat-glb" src="./glb/p1.glb"></a-asset-item>
       </a-assets>
 
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
@@ -84,7 +80,7 @@
         <a-entity light="type: directional; intensity: 3; color: #ff8800" position="0 -3 10"></a-entity>
         <a-entity light="type: ambient; intensity: 1.5; color: #aa66ff"></a-entity>
 
-        <a-gltf-model rotation="0 0 0" position="0 0 0.2" scale="0.5 0.5 0.5" src="#p-cat"></a-gltf-model>
+        <a-gltf-model rotation="0 0 0" position="0 -0.3 0" scale="0.1 0.1 0.1" src="#p-cat"></a-gltf-model>
       </a-entity>
 
       <!-- 타겟 1 -->
@@ -93,7 +89,7 @@
         <a-entity light="type: directional; intensity: 3; color: #ff8800" position="0 -3 10"></a-entity>
         <a-entity light="type: ambient; intensity: 1.5; color: #aa66ff"></a-entity>
 
-        <a-gltf-model rotation="0 0 0" position="0 0 0.2" scale="0.5 0.5 0.5" src="#cat-glb"></a-gltf-model>
+        <a-gltf-model rotation="0 0 0" position="0 -0.3 0" scale="0.1 0.1 0.1" src="#cat-glb"></a-gltf-model>
       </a-entity>
 
     </a-scene>

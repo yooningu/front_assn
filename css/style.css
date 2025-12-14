@@ -53,6 +53,17 @@ button {
   padding: 10px;
 }
 
+
+
+
+
+
+
+
+
+
+
+
 /* 공통 flex 정렬 */
 .header-inner,
 .header-left,
@@ -64,6 +75,7 @@ button {
   display: flex;
   align-items: center;
 }
+
 
 .header-inner,
 .section-header {
