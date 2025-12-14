@@ -214,9 +214,7 @@ button {
     width: 140px;
   }
 
-  .product-detail-container {
-    flex-direction: column;
-  }
+
 
   .product-visual {
     flex: 1;
